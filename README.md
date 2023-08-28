@@ -38,7 +38,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-## Cron Jobs
+## Cron Job
 ```yaml
 ...
     spec:
