@@ -1,0 +1,30 @@
+NAMESPACE="my-openfinance-ns"
+
+# List of CRL URLs to download
+declare -a crl_urls_default=(
+    # Certisign
+    "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLEVG3/LatestCRL.crl"  # Certisign EV G3
+    "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLEVG4/LatestCRL.crl"  # Certisign EV G4
+    "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLG2/LatestCRL.crl"    # Certisign G2
+
+    # Serasa
+    "http://www.certificadodigital.com.br/repositorio/lcr/serasasslevv10-2.crl"                 # Serasa V2
+    "http://www.certificadodigital.com.br/repositorio/lcr/serasasslevv10-3.crl"                 # Serasa V3
+    "http://www.certificadodigital.com.br/repositorio/lcr/serasasslevv10-4.crl"                 # Serasa V4
+
+    # Serpro
+    "https://repositorio.serpro.gov.br/lcr/acserprosslv1.crl"                                   # AC Serpro V1
+
+    # Soluti
+    "http://ccd2.acsoluti.com.br/lcr/ac-soluti-ssl-ev-v10-g2.crl"                               # AC Soluti G2
+    "http://ccd2.acsoluti.com.br/lcr/ac-soluti-ssl-ev-v10-g3.crl"                               # AC Soluti G3
+    "http://ccd2.acsoluti.com.br/lcr/ac-soluti-ssl-ev-v10-g4.crl"                               # AC Soluti G4
+
+    # Raiz V10
+    "http://acraiz.icpbrasil.gov.br/LCRacraizv10.crl"                                           # AC Raiz V10
+)
+
+CRL_URLS=$(printf "%s," "${crl_urls_default[@]}")
+CRL_URLS=${CRL_URLS%,}
+
+echo "$CRL_URLS"
