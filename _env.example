@@ -3,9 +3,9 @@ NAMESPACE="my-openfinance-ns"
 # List of CRL URLs to download
 declare -a crl_urls_default=(
     # Certisign
+    "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLG2/LatestCRL.crl"    # Certisign G2
     "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLEVG3/LatestCRL.crl"  # Certisign EV G3
     "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLEVG4/LatestCRL.crl"  # Certisign EV G4
-    "http://icp-brasil.certisign.com.br/repositorio/lcr/ACCertisignICPBRSSLG2/LatestCRL.crl"    # Certisign G2
 
     # Serasa
     "http://www.certificadodigital.com.br/repositorio/lcr/serasasslevv10-2.crl"                 # Serasa V2
